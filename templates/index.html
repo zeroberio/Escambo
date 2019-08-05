@@ -1,3 +1,25 @@
+Skip to content
+ 
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@zeroberio 
+ Watch 1
+ Star 3  Fork 8 allineo/AppBasicao
+ Code  Issues 0  Pull requests 0  Projects 0  Wiki  Security  Insights
+Branch: master 
+AppBasicao/templates/index.html
+Find file Copy path
+@allineo allineo gitpod
+3ffa9d3 on 10 Jun
+1 contributor
+94 lines (83 sloc)  3.34 KB
+RawBlameHistory
+  
 <html>
 
 <head>
@@ -40,3 +62,68 @@
 				</div>
 			</nav>
 			<ul class="sidenav" id="mobile-demo">
+				<li><a href="javascript:void(0)" onclick="showLoginPage()"><i class="material-icons" >home</i> &nbsp; Início</a></li>
+				<li><a href="javascript:void(0)" onclick="showMapPage()"><i class="material-icons" >map</i> &nbsp; Mapa</a></li>
+				<li><a href="javascript:void(0)" onclick="showFormPage()"><i class="material-icons" >assignment</i> &nbsp; Cadastro</a></li>
+			</ul>
+		</section>
+
+		<section id="loginPage">
+			<center>
+				<br/><br/><br/>
+				<img src="/static/logoapp.png" width="200" alt="Logo do App" />
+				<br/><br/><br/>
+
+				<div id="fb-root"></div>
+				<div class="fb-login-button" data-size="large" data-button-type="login_with"
+					data-auto-logout-link="true" data-use-continue-as="false"
+					scope="public_profile,email" onlogin="checkLoginState();"></div>
+
+				<br/><br/>
+				<div id="google-signin2"></div>
+			</center>
+		</section>
+
+		<section id="mapPage" style="display:none;">
+			<center>
+				<h1>Mapa</h1></center>
+				<div id="map"></div>
+				<br/>
+			<div id="listFormDiv" style="margin:20px;"></div>
+		</section>
+
+		<section id="formPage" style="display:none;">
+			<center>
+				<h1>Cadastro</h1></center>
+			<div id="userfield" style="margin:30px;">
+				Usuário:<b> Não Logado</b>
+			</div>
+			<div style="margin:30px;">
+				<label for="feedbackmessageTextArea"><b>Envie-nos seu feedback, dúvidas ou sugestões:</b></label>
+				<textarea id="feedbackmessageTextArea"></textarea>
+			</div>
+			<div style="margin:30px;">
+				<label for="contactField"><b>Informação de contato:</b></label>
+				<input id="contactField" type="text">
+			</div>
+			<div>
+				<center><button type="button" name="action" onclick="saveForm();">Salvar</button></center>
+			</div>
+		</section>
+
+	</div>
+</body>
+</html>
+© 2019 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+
